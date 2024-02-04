@@ -19,3 +19,10 @@ It should be noted that there are also a number of other approaches for coarse-g
 An example of the existence of fine-grained locality among two identical chunks
 
 Here each chunk is divided into N subchunks of fixed size. The corresponding subchunks in block B are very similar (one-to-one) to the subchunks in block A, and therefore their characteristics are very much the same.
+
+# LSH
+LSH (Locality Sensitive Hashing) algorithm is widely used in the field of data processing to find close neighbours and similar objects. This algorithm allows efficient processing of large amounts of data and solving problems related to the search of approximate matches.
+LSH is based on the idea of using hash functions that group close objects into the same hash value. This speeds up the search for nearest neighbours, since objects with the same hash values are very likely to be close to each other.
+An important feature of the LSH algorithm is its ability to process high dimensional data. This is achieved by selecting appropriate hash functions and parameters that take into account the peculiarities of high dimensional space and allow to find nearest objects efficiently.
+Experiments and studies show that LSH algorithm demonstrates high performance and efficiency of nearest neighbour search in different scenarios. It is able to speed up the computation by several times and increase the throughput of the system.
+Overall, the LSH algorithm is a powerful tool for solving nearest neighbour search and data processing problems, especially in the context of large volumes and high dimensional data, which makes it a strong rival to the Finesse algorithm.
