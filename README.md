@@ -1,7 +1,7 @@
-### Finesse
+# Finesse
 The most popular approach to determine the similarity of data for delta compression is the "N-transform superfunctional" (N-transform SF). However, computing the N-transform SF requires large computational resources: for each data fragment, a linear transformation must be applied N times to its Rabin footprint. To simplify this process, we can exploit the feature locality that exists among very similar fragments.
 Therefore, Finesse method was proposed which is based on feature locality and fast similarity detection. It divides each fragment into several sub-fragments of fixed size, computes the features for each sub-fragment separately, and then combines them into superfunctions. Experiments have shown that compared to the state-of-the-art N-transform based SF approach, the Finesse method speeds up similarity computation by a factor of 3.2-3.5 and increases deduplication and delta compression system throughput by 41-85%, while achieving comparable compression ratios.
-# Superfunction approach
+### Superfunction approach
 Similarity Determination - is the first step required for delta compression, which allows computing the similarity of data fragments and finding candidates for compression. As mentioned above, currently the most popular method for similarity detection at the fragment level is the "N-transform SF" approach. It was first proposed by Broder and is based on "Broder's theorem" which evaluates the similarity between two sets as shown below:
 Theorem 1: Consider two sets A and B, with H(A) and H(B) being the corresponding hash sets of elements of A and B respectively, where H is chosen uniformly and randomly from a minimally independent family of permutations. An element of the set is mapped to an integer. Let min(S) denote the smallest element of the set of integers S. Then:
 Pr⁡〖[min〗⁡(H(A)) =min⁡(H(B))]=  (|A∩B|)/(|A∪B|)
